@@ -3,9 +3,11 @@ const express = require("express");
 const httpErrors = require("http-errors");
 const logger = require("morgan");
 const path = require("path");
+const mongoose = require("mongoose");
 require("dotenv").config();
 const indexRouter = require("./routes/index");
-
+require("./controllers/shopController");
+mongoose.connect(process.env.MONGO_CONNECTION_STRING);
 const app = express();
 const cors = require("cors");
 app.use(cors());

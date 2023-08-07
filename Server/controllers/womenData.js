@@ -1,0 +1,66 @@
+const mongoose = require("mongoose");
+const shopModel = require("../models/shopModel");
+const title = [
+  "Stitched Mouse Top",
+  "Elegant Black Skirt",
+  "Cute Victorian Dress",
+  "Apple themed Dress",
+  "Vintage Black Bag",
+  "Dreamy Night Blouse",
+  "White Flower Heels",
+  "Green Leathery Bag",
+  "Heavy Black Coat",
+  "Black Stitched Boots",
+  "White & Silver Skirt",
+  "Golden Spike Heels",
+  "Red Elegant Bag",
+];
+const description = [
+  "Elegant and cute top for animal lovers",
+  "Stitched skirt , goes well with a white top ",
+  "Go back in time with this art piece",
+  "Be unique with this fruity delicate dress",
+  "Turn back the clock with this leather black bag",
+  "Look as starry as ever",
+  "Cute heels that go well with every outfit",
+  "An elegant bag for your special occasions",
+  "Impress people around you with this bold look",
+  "Impress people around you with this bold look",
+  "Look like a bird with this artistic piece",
+  "Standout among the rest",
+  "Be as bold as you can with this rose color",
+];
+const price = [
+  64.99, 60.0, 99.99, 120.0, 49.99, 62.0, 109.99, 59.99, 167.99, 79.99, 51.99,
+  99.99, 199.99,
+];
+const image = [
+  "https://assets.vogue.com/photos/56d32ddd134a62ee08cf1e9f/master/w_1920,c_limit/_ARC0034.jpg",
+  "https://assets.vogue.com/photos/56d32dcfde114fd342ed27e8/master/w_1920,c_limit/_ARC0043.jpg",
+  "https://assets.vogue.com/photos/56d32dae134a62ee08cf1e78/master/w_1920,c_limit/_ARC0058.jpg",
+  "https://assets.vogue.com/photos/56d32d97b61559d853e5cc0f/master/w_1920,c_limit/_ARC0075.jpg",
+  "https://assets.vogue.com/photos/56d32dd4de114fd342ed27ef/master/w_1920,c_limit/_ARC0087.jpg",
+  "https://assets.vogue.com/photos/56d32d8c134a62ee08cf1e61/master/w_1920,c_limit/_ARC0112.jpg",
+  "https://assets.vogue.com/photos/56d32d6c134a62ee08cf1e42/master/w_1920,c_limit/_ARC0122.jpg",
+  "https://assets.vogue.com/photos/56d32dc3237d48d2424c8d1b/master/w_1920,c_limit/_ARC0130.jpg",
+  "https://assets.vogue.com/photos/56d2fbfb134a62ee08cf19d4/master/w_1920,c_limit/_DOL0191.jpg",
+  "https://assets.vogue.com/photos/56d32d6034f2e1d0534486a5/master/w_1920,c_limit/_ARC0166.jpg",
+  "https://assets.vogue.com/photos/56d32cf6b61559d853e5cbef/master/w_1920,c_limit/_ARC0175.jpg",
+  "https://assets.vogue.com/photos/56d32db1237d48d2424c8d10/master/w_1920,c_limit/_ARC0203.jpg",
+  "https://assets.vogue.com/photos/56d32dab19e71def089ecfdf/master/w_1920,c_limit/_ARC0216.jpg",
+];
+const category = [
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+  "Women",
+];

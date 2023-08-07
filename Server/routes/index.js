@@ -1,12 +1,12 @@
-const { Router } = require('express');
+const { Router } = require("express");
+const {
+  fetchMenClothes,
+  fetchWomenClothes,
+} = require("../controllers/shopController");
 
 const router = Router();
 
 /* GET index page. */
-router.get('/', (req, res) => {
-  res.json({
-    title: 'Express'
-  });
-});
-
+// router.get("/men-clothes", fetchMenClothes);
+// router.get("/women-clothes", fetchWomenClothes);
 module.exports = router;
