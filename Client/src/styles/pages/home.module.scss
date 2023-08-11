@@ -1,0 +1,32 @@
+@use "../variables/variables" as v;
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-position: top;
+}
+.heroVideo {
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 165%;
+  object-fit: cover;
+  z-index: -1;
+}
+button {
+  padding: 1.2rem 3.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  font-size: large;
+  font-family: v.$primary-font;
+  color: white;
+  background-color: black;
+  transition: all 0.2s linear;
+  &:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+}
