@@ -3,11 +3,12 @@ import styles from "../styles/pages/shop.module.scss";
 import heroImg from "../assets/womenHero.jpg";
 import React, { useEffect, useState } from "react";
 import { Item } from "../Types";
+import ShopItem from "./ShopItem";
 
 type Props = {};
 
 function Women({}: Props) {
-  const [data, setData] = useState<Item | null>(null);
+  const [data, setData] = useState<Item[] | null>(null);
   useEffect(() => {
     axios
       .get("http://localhost:3000/women-clothes")
@@ -22,19 +23,9 @@ function Women({}: Props) {
         <h1>WOMEN'S CLOTHING</h1>
       </div>
       <div className={styles.shopMain}>
-        <div style={{ "background-color": "red" }}></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        {data?.map((item, index) => (
+          <ShopItem data={item} key={`item${index}`} />
+        ))}
       </div>
     </div>
   );
