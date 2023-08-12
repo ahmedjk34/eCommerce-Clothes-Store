@@ -1,4 +1,4 @@
-import React from "react";
+import React, { DOMElement, useRef } from "react";
 import styles from "../styles/pages/nav.module.scss";
 import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -6,12 +6,29 @@ import { useNavigate } from "react-router-dom";
 type Props = {};
 function Nav({}: Props) {
   const navigate = useNavigate();
-  function handelClick(page) {
+  const navRef = useRef<HTMLElement | null>(null);
+  function handelClick(page: String) {
     navigate(`${page}`);
   }
-
+  function handelNavAnimation(e?: MouseEvent<HTMLDivElement, MouseEvent>) {
+    if (document.documentElement.scrollTop || e?.type == "mouseenter")
+      navRef.current?.classList.add(styles.active);
+    else if (
+      document.documentElement.scrollTop <= 40 ||
+      e?.type == "mouseleave"
+    )
+      navRef.current?.classList.remove(styles.active);
+  }
+  window.onscroll = () => {
+    handelNavAnimation();
+  };
   return (
-    <div className={styles.nav}>
+    <div
+      className={styles.nav}
+      ref={navRef}
+      onMouseEnter={(e) => handelNavAnimation(e)}
+      onMouseLeave={(e) => handelNavAnimation(e)}
+    >
       <h2 className={styles.motto}>Be The Style Icon</h2>
       <div className={styles.navOptions}>
         <h1>ELEGANT</h1>

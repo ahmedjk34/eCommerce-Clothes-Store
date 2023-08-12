@@ -2,26 +2,31 @@
 @use "../variables/variables" as v;
 
 .nav {
+  position: fixed;
+  height: 6rem;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: rgba($color: #000000, $alpha: 0);
   transition: all 0.4s ease-in-out;
-  height: 100%;
+
   color: white;
   padding: 0 2rem;
   font-family: v.$primary-font;
-  &:hover {
-    background-color: rgba($color: #000000, $alpha: 1);
-    height: 110%;
-    //create the underline when hovering the nav
-    .motto::after {
-      width: 12rem;
-    }
-  }
+
   //this is used to center the elements , with space between
   > * {
     flex: 1;
+  }
+}
+//used to handel hover & scroll
+.nav.active {
+  background-color: rgba($color: #000000, $alpha: 1);
+  height: 8rem;
+  //create the underline when hovering the nav
+  .motto::after {
+    width: 12rem;
   }
 }
 .navOptions {
@@ -44,7 +49,6 @@
 .motto {
   font-family: v.$title-font;
   position: relative;
-
   &::after {
     content: "";
     display: block;
