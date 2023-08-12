@@ -17,10 +17,10 @@ function Women({}: Props) {
   }, []);
   return (
     <div className={styles.shop}>
-      <img src={heroImg} className={styles.heroImg}></img>
       <div className={styles.shopGradient}></div>
       <div className={styles.shopHero}>
         <h1>WOMEN'S CLOTHING</h1>
+        <img src={heroImg} className={styles.heroImg}></img>
       </div>
       <div className={styles.shopMain}>
         {data?.map((item, index) => (

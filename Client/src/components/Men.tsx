@@ -18,9 +18,9 @@ function Men({}: Props) {
   }, []);
   return (
     <div className={styles.shop}>
-      <img src={heroImg} className={styles.heroImg}></img>
       <div className={styles.shopGradient}></div>
       <div className={styles.shopHero}>
+        <img src={heroImg} className={styles.heroImg}></img>
         <h1>MEN'S CLOTHING</h1>
       </div>
       <div className={styles.shopMain}>
