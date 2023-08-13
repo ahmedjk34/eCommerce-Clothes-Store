@@ -45,7 +45,7 @@ function Nav({}: Props) {
         </div>
       </div>
       <div className={styles.iconHolder}>
-        <FaShoppingCart size={33} />
+        <FaShoppingCart size={33} onClick={() => handelClick("/cart")} />
         <span className={styles.itemNumber}>
           {cart.reduce(
             (acc: number, item: Item) => acc + (item?.count ?? 0),
