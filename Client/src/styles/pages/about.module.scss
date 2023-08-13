@@ -1,0 +1,28 @@
+@use "../variables/_variables.scss" as v;
+.about {
+  background-image: url("https://joshwrn.github.io/shopping-cart/static/media/about.598a0cd0.jpg");
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: black;
+  color: white;
+  padding: 8rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 12px black;
+  margin-top: -5vh;
+  h1 {
+    font-family: v.$title-font;
+  }
+  h4 {
+    font-family: v.$primary-font;
+  }
+}
