@@ -25,7 +25,7 @@ function Men({}: Props) {
       </div>
       <div className={styles.shopMain}>
         {data?.map((item, index) => (
-          <ShopItem data={item} key={`item${index}`} />
+          <ShopItem item={item} key={`item${index}`} />
         ))}
       </div>
     </div>
