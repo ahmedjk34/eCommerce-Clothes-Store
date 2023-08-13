@@ -1,16 +1,21 @@
-import React, { DOMElement, useRef } from "react";
+import React, { DOMElement, useContext, useRef } from "react";
 import styles from "../styles/pages/nav.module.scss";
-import { FaShoppingCart, FaSearch } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { cartContext } from "../App";
+import { Item } from "../Types";
 
 type Props = {};
 function Nav({}: Props) {
   const navigate = useNavigate();
-  const navRef = useRef<HTMLElement | null>(null);
-  function handelClick(page: String) {
+  const navRef = useRef<HTMLDivElement>(null);
+  const { cart, setCart } = useContext(cartContext);
+  function handelClick(page: String): void {
     navigate(`${page}`);
   }
-  function handelNavAnimation(e?: MouseEvent<HTMLDivElement, MouseEvent>) {
+  function handelNavAnimation(
+    e?: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
     if (document.documentElement.scrollTop || e?.type == "mouseenter")
       navRef.current?.classList.add(styles.active);
     else if (
@@ -40,8 +45,13 @@ function Nav({}: Props) {
         </div>
       </div>
       <div className={styles.iconHolder}>
-        <FaShoppingCart size={30} />
-        <FaSearch size={25} />
+        <FaShoppingCart size={33} />
+        <span className={styles.itemNumber}>
+          {cart.reduce(
+            (acc: number, item: Item) => acc + (item?.count ?? 0),
+            0
+          )}
+        </span>
       </div>
     </div>
   );
