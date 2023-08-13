@@ -15,9 +15,9 @@ import Cart from "./components/Cart";
 export const cartContext = createContext<ContextType>([]);
 function App() {
   const [cart, setCart] = useState<Item[] | []>([]);
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  // useEffect(() => {
+  //   console.log(cart);
+  // }, [cart]);
   return (
     <cartContext.Provider value={{ cart, setCart }}>
       <>
@@ -27,6 +27,7 @@ function App() {
           <Route path="/Men" element={<Men />}></Route>
           <Route path="/Women" element={<Women />}></Route>
           <Route path="/About" element={<About />}></Route>
+          <Route path="/Cart" element={<Cart />}></Route>
         </Routes>
       </>
     </cartContext.Provider>
