@@ -5,4 +5,9 @@ export interface Item {
   price: number;
   image: string;
   category: string;
+  count?: number;
+}
+export interface ContextType {
+  cart: Item[];
+  setCart: React.Dispatch<React.SetStateAction<Item[] | []>>;
 }
