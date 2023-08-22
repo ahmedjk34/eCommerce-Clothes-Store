@@ -42,8 +42,12 @@
     justify-content: center;
     gap: 2rem;
   }
+  h5 {
+    transition: all 0.3s linear;
+  }
   h5:hover {
     cursor: pointer;
+    opacity: 0.5;
   }
 }
 .motto {
