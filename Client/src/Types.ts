@@ -9,5 +9,5 @@ export interface Item {
 }
 export interface ContextType {
   cart: Item[];
-  setCart: React.Dispatch<React.SetStateAction<Item[] | []>>;
+  setCart: React.Dispatch<React.SetStateAction<Item[] | null>>;
 }
