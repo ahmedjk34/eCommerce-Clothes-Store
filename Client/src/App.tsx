@@ -12,7 +12,7 @@ import { Item } from "./Types";
 import Cart from "./components/Cart";
 
 //@ts-ignore
-export const cartContext = createContext<ContextType>([]);
+export const cartContext = createContext<ContextType | null>(null);
 function App() {
   const [cart, setCart] = useState<Item[] | []>([]);
   // useEffect(() => {
