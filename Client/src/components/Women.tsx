@@ -1,7 +1,7 @@
 import axios from "axios";
 import styles from "../styles/pages/shop.module.scss";
 import heroImg from "../assets/womenHero.jpg";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Item } from "../Types";
 import ShopItem from "./ShopItem";
 

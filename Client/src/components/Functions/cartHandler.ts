@@ -12,10 +12,11 @@ export function addToCart({ item, cart, setCart }: Props) {
     cart.map((piece) => {
       if (piece._id == item._id) {
         inCart = true;
-        return { ...item, count: piece.count + 1 };
+        return { ...item, count: (piece?.count ?? 0) + 1 };
       } else return piece;
     })
   );
+  //@ts-ignore
   !inCart && setCart((prev) => [...prev, { ...item, count: 1 }]);
 }
 export function removeFromCart({ item, cart, setCart }: Props) {
@@ -24,7 +25,7 @@ export function removeFromCart({ item, cart, setCart }: Props) {
     setCart(
       cart.map((piece) => {
         if (piece._id == item._id) {
-          return { ...item, count: piece.count - 1 };
+          return { ...item, count: (piece?.count ?? 0) - 1 };
         } else return piece;
       })
     );

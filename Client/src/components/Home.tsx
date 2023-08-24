@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import video from "../assets/bgv.mp4";
 import styles from "../styles/pages/home.module.scss";

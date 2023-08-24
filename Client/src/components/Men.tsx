@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import heroImg from "../assets/menHero.jpg";
 import styles from "../styles/pages/shop.module.scss";
 

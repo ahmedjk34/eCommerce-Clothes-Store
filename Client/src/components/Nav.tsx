@@ -1,4 +1,4 @@
-import React, { DOMElement, useContext, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import styles from "../styles/pages/nav.module.scss";
 import { FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ type Props = {};
 function Nav({}: Props) {
   const navigate = useNavigate();
   const navRef = useRef<HTMLDivElement>(null);
-  const { cart, setCart } = useContext(cartContext) as ContextType;
+  const { cart } = useContext(cartContext) as ContextType;
   function handelClick(page: String): void {
     navigate(`${page}`);
   }
