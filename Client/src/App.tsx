@@ -1,6 +1,4 @@
-import { ContextType, createContext, useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { ContextType, createContext, useState } from "react";
 import "./styles/pages/global-rules.scss";
 import Nav from "./components/Nav";
 import { Route, Routes } from "react-router-dom";
