@@ -42,10 +42,10 @@
     justify-content: center;
     gap: 2rem;
   }
-  h5 {
+  h4 {
     transition: all 0.3s linear;
   }
-  h5:hover {
+  h4:hover {
     cursor: pointer;
     opacity: 0.5;
   }
@@ -84,5 +84,12 @@
   }
   &:hover {
     cursor: pointer;
+  }
+}
+
+@media (max-width: 800px) {
+  .motto {
+    display: none;
+    color: red;
   }
 }

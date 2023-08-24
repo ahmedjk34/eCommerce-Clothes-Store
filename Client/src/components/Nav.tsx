@@ -38,10 +38,9 @@ function Nav({}: Props) {
       <div className={styles.navOptions}>
         <h1>ELEGANT</h1>
         <div>
-          <h5 onClick={() => handelClick("/")}>Home</h5>
-          <h5 onClick={() => handelClick("/women")}>Women</h5>
-          <h5 onClick={() => handelClick("/men")}>Men</h5>
-          <h5 onClick={() => handelClick("/about")}>About</h5>
+          <h4 onClick={() => handelClick("/")}>Home</h4>
+          <h4 onClick={() => handelClick("/women")}>Women</h4>
+          <h4 onClick={() => handelClick("/men")}>Men</h4>
         </div>
       </div>
       <div className={styles.iconHolder}>

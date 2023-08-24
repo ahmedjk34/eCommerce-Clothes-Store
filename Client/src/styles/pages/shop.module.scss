@@ -2,7 +2,7 @@
 
 .heroImg {
   position: absolute;
-  min-width: 100%;
+  width: 100%;
   top: 0;
   height: 33rem;
   object-fit: cover;
@@ -22,6 +22,7 @@
 }
 .shop {
   display: grid;
+  position: relative;
   grid-template: 33rem 1fr / 1fr;
 }
 .shopHero {
@@ -31,6 +32,7 @@
   color: white;
   font-family: v.$title-font;
   font-size: xx-large;
+  font-size: 3vw;
 }
 .shopMain {
   display: grid;
@@ -84,5 +86,11 @@
     .itemOverlay {
       opacity: 0.8;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .shopHero {
+    font-size: 4vw;
   }
 }
