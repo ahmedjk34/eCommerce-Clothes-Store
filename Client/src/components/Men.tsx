@@ -20,14 +20,18 @@ function Men({}: Props) {
     <div className={styles.shop}>
       <div className={styles.shopGradient}></div>
       <div className={styles.shopHero}>
+        <h1>WOMEN'S CLOTHING</h1>
         <img src={heroImg} className={styles.heroImg}></img>
-        <h1>MEN'S CLOTHING</h1>
       </div>
-      <div className={styles.shopMain}>
-        {data?.map((item, index) => (
-          <ShopItem item={item} key={`item${index}`} />
-        ))}
-      </div>
+      {data ? (
+        <div className={styles.shopMain}>
+          {data?.map((item, index) => (
+            <ShopItem item={item} key={`item${index}`} />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.loading}>Loading....</div>
+      )}
     </div>
   );
 }

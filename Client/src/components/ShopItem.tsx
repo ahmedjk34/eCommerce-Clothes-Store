@@ -16,7 +16,9 @@ function ShopItem({ item: item }: Props) {
       className={styles.shopItem}
       onClick={() => addToCart({ item, cart, setCart })}
     >
-      <img src={item.image} alt={item.title}></img>
+      <div>
+        <img src={item.image} alt={item.title}></img>
+      </div>
       <div className={styles.priceHolder}>{item.price}$</div>
       <div className={styles.itemOverlay}>
         <h2>{item.title}</h2>

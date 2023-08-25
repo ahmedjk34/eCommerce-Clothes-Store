@@ -53,6 +53,7 @@
   img {
     object-fit: cover;
     width: 100%;
+    height: 100%;
   }
   .priceHolder {
     display: flex;
@@ -87,6 +88,14 @@
       opacity: 0.8;
     }
   }
+}
+.loading {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  font-family: v.$title-font;
 }
 
 @media (max-width: 600px) {

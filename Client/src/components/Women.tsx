@@ -22,11 +22,15 @@ function Women({}: Props) {
         <h1>WOMEN'S CLOTHING</h1>
         <img src={heroImg} className={styles.heroImg}></img>
       </div>
-      <div className={styles.shopMain}>
-        {data?.map((item, index) => (
-          <ShopItem item={item} key={`item${index}`} />
-        ))}
-      </div>
+      {data ? (
+        <div className={styles.shopMain}>
+          {data?.map((item, index) => (
+            <ShopItem item={item} key={`item${index}`} />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.loading}>Loading....</div>
+      )}
     </div>
   );
 }
