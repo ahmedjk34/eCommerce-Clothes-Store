@@ -12,7 +12,7 @@ function Men({}: Props) {
   const [data, setData] = useState<Item[] | null>(null);
   useEffect(() => {
     axios
-      .get("https://ecommerce-clothes-store.onrender.com/men-clothes")
+      .get("https://ecommerce-clothes-store.vercel.app/men-clothes")
       .then((res) => setData(res.data))
       .catch((e) => console.log(e));
   }, []);

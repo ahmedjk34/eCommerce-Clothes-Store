@@ -11,7 +11,7 @@ function Women({}: Props) {
   const [data, setData] = useState<Item[] | null>(null);
   useEffect(() => {
     axios
-      .get("https://ecommerce-clothes-store.onrender.com/women-clothes")
+      .get("https://ecommerce-clothes-store.vercel.app/women-clothes")
       .then((res) => setData(res.data))
       .catch((e) => console.log(e));
   }, []);
